@@ -54,6 +54,23 @@ main{
     margin-top: 100px;
 }
 
+
+#welcome{
+    padding: 0px 60px 20px;
+}
+
+#welcome .titulo-perfil{
+    color: #9c0606;
+    font-size: 40px;
+}
+
+.sobre-perfil{
+    text-align: justify;
+    line-height: 25px;
+    margin: 10px 0px 20px;
+    font-size: 17px;
+}
+
 .card{
     padding: 20px;
     margin: 40px auto;
@@ -66,6 +83,14 @@ main{
     color:  rgb(44, 44, 44);
     box-shadow: 0 5px 10px #888888;
 }
+.listar{
+    width: 90% !important;
+}
+
+table{
+    width: 100%;
+}
+
 
 .card h2, .titulo-perfil, .card caption{
     border-bottom: 1px solid rgb(192, 192, 192);
@@ -128,11 +153,29 @@ main{
     margin-top: 20px;
     border: none !important;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .card button:hover{
     background-color: #b61f1f;
 }
+
+.card .botoes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .botoes button{
+    width: 48%;
+}
+
+.card .botoes .cancel{
+    background-color: #918b8b;
+}
+.card .botoes .cancel:hover{
+    background-color: #a5a1a1;
+}
+
 footer{
     padding: 40px 0px;
     position: relative;
