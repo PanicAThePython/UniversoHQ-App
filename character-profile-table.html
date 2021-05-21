@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Universo HQ - Listagem</title>
+    <title>Universo HQ - Perfis</title>
 </head>
 <body>
     <header id="start">
@@ -16,7 +16,17 @@
         </div>
     </header>
     <main>
-        <h2 id="all-list">Listagem Geral</h2>
+        <div id="filter">
+            <form action="">
+                <select name="profiles" id="profiles">
+                    <option value="Herói">Herói</option>
+                    <option value="Anti-herói">Anti-herói</option>
+                    <option value="Vilão">Vilão</option>
+                </select>
+                <button type="button">Buscar</button>
+            </form>
+        </div>
+        <h2 id="all-list">{{profiles.value}}</h2>
         <div class="card listar">
             <table id="listagem">
                 <thead>
@@ -35,18 +45,6 @@
                     </tr>
                 </thead>
                 <tbody id="listagem-body">
-                    <tr>
-                        <td>Loki</td>
-                        <td>----</td>
-                        <td>Marvel</td>
-                        <td>Anti-herói</td>
-                        <td>Transmorfo, Deus da Trapaça, feiticeiro</td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" >
-                            <div class="division"></div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
