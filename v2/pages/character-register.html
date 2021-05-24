@@ -21,9 +21,9 @@
     </header>
     <main>
         <nav>
-            <button type="button" id="menu-button"></button>
+            <button type="button" id="menu-button" onclick="openMenu()"></button>
 
-            <div id="menu-list">
+            <div id="menu-list" class="invisible">
                 <p>Olá, {{user.name}}!</p>
                 <ul id="vertical-list">
                     <li class="item-list">Sair</li>
@@ -31,9 +31,9 @@
                     <li class="item-list"><a href="./data-table.html">Listar Todos</a></li>
                     <li class="item-list"><a>Listagem por Perfil</a>
                         <div class="tipos-perfil">
+                            <a class="itens-perfil" id="link-antiheroi" onclick="loadAntiHero()" href="character-profile-table.html#antiherois" target="_blank">Anti-herói</a>
                             <a class="itens-perfil" id="link-heroi" onclick="loadHero()"  href="character-profile-table.html#herois" target="_blank">Herói</a>
                             <a class="itens-perfil" id="link-vilao" onclick="loadVillain()" href="character-profile-table.html#viloes" target="_blank">Vilão</a>
-                            <a class="itens-perfil" id="link-antiheroi" onclick="loadAntiHero()" href="character-profile-table.html#antiherois" target="_blank">Anti-herói</a>
                         </div>
                     </li>
                 </ul>
@@ -50,14 +50,14 @@
                 <input type="text" name="ego" id="ego" placeholder="Ex: Peter Parker"> 
                 <label for="franquia" class="title">*Franquia:</label>
                 <div class="vertical-flex">
-                    <div><input type="radio" name="franquia" id="franquia" value="Marvel" required/>Marvel</div>
                     <div><input type="radio" name="franquia" id="franquia" value="DC"/>DC<br></div>
+                    <div><input type="radio" name="franquia" id="franquia" value="Marvel" required/>Marvel</div>
                 </div>
                 <label for="perfil" class="title">*Perfil:</label>
                 <div class="vertical-flex">
+                    <div><input type="radio" name="perfil" id="perfil" value="Anti-herói"/>Anti-herói<br></div>
                     <div><input type="radio" name="perfil" id="perfil" value="Herói" required/>Herói</div>
                     <div><input type="radio" name="perfil" id="perfil" value="Vilão"/>Vilão</div>
-                    <div><input type="radio" name="perfil" id="perfil" value="Anti-herói"/>Anti-herói<br></div>
                 </div>
                 <label for="poderes" class="title">*Poderes:</label>
                 <textarea name="poderes" id="poderes" cols="30" rows="10" required></textarea>
@@ -73,6 +73,6 @@
     <footer>
         <small>&copy; João Vitor de Oliveira e Natália Sens Weise</small>
     </footer>
-    
+    <script src="../scripts/menu.js"></script>
 </body>
 </html>
