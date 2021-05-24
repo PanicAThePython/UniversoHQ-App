@@ -49,7 +49,6 @@ body{
     border: 2px solid rgb(44, 44, 44);
 }
 
-
 main{
     margin-top: 100px;
 }
@@ -64,11 +63,126 @@ main{
     font-size: 40px;
 }
 
+#menu-button{
+    background-image: url("../images/menu.png");
+    background-repeat: no-repeat;
+    border: none;
+    margin-top: -150px;
+    position: absolute;
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+}
+
+#menu-list{
+    background-color: #9c0606;
+    color: #fff !important;
+    text-decoration: none;
+    width: 250px;
+    height: 354px;
+    position: absolute;
+    margin-top: -125px;
+}
+
+#menu-list p{
+    margin-left: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+#menu-list #vertical-list .item-list{
+    display: inline;
+    position: relative;
+    margin-right: 25px;
+    font-size: 20px;
+}
+
+#menu-list #vertical-list .item-list:hover{
+    font-weight: 500;
+}
+
+#menu-list #vertical-list .item-list a{
+    text-decoration: none;
+    outline: 0;
+}
+
+#menu-list #vertical-list{
+    /* margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.item-list, .item-list a{
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.item-list:hover .tipos-perfil{
+    visibility: visible !important;
+}
+/* 
+.tipos-perfil{
+    margin-top: 1px !important;
+    visibility: hidden;
+    position: absolute;
+    justify-content: space-around !important;
+    flex-direction: column;
+    text-align: left !important;
+    margin-left: 343px;
+    font-size: 20px;
+} */
+
+.tipos-perfil {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.tipos-perfil .itens-perfil{
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #9c0606;
+    /* border: none;
+    padding: 5px; */
+    text-align: left;
+    font-size: 20px;
+    /* font-weight: bold; */
+    width: 173px;
+}
+
+.tipos-perfil .itens-perfil:hover{
+    background-color: #888888;
+}
+
+.section{
+    margin: 50px 0;
+}
+
+.section img{
+    /* width: 60% !important; */
+    width: 100% ;
+    height: 30% !important;
+    /* margin-left: 20%; */
+}
+
 .sobre-perfil{
     text-align: justify;
     line-height: 25px;
-    margin: 10px 0px 20px;
+    margin: 10px;
     font-size: 17px;
+}
+
+.dica{
+    text-align: center;
+    margin: 30px 0px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.dica span{
+    color: #9c0606;
 }
 
 #actions{
@@ -88,7 +202,8 @@ main{
     box-shadow: 0 5px 10px #888888;
 }
 .listar{
-    width: 90% !important;
+    /* width: 90% !important; */
+    width: 85% !important;
 }
 
 table{
@@ -104,6 +219,7 @@ table{
 #all-list{
     color:  rgb(44, 44, 44);
     margin: 40px auto;
+    margin-left: 14px;
 }
 
 #filter select{
@@ -114,6 +230,18 @@ table{
 
 #filter button{
     width: 25% !important;
+}
+
+.warning{
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight:500;
+}
+
+.titulo-perfil{
+    margin-left: 10px;
 }
 
 #all-list, .card h2, .titulo-perfil, .card caption{
@@ -218,6 +346,16 @@ table{
 }
 .card .botoes .cancel:hover{
     background-color: #a5a1a1;
+}
+
+.update-btn, .delete-btn{
+    width: 60px !important;
+    margin: 5px !important;
+}
+
+.update-btn img, .delete-btn img{
+    width: 20px;
+    height: 20px;
 }
 
 footer{

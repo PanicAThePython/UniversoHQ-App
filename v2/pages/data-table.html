@@ -8,7 +8,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script src="../scripts/defines.js"></script>
     <script src="../scripts/session.js"></script>
-    <script src="../scripts/checksession.js"></script>
+    <!-- <script src="../scripts/checksession.js"></script> -->
     <title>Universo HQ - Listagem</title>
 </head>
 <body>
@@ -20,6 +20,27 @@
         </div>
     </header>
     <main>
+
+        <nav>
+            <button type="button" id="menu-button"></button>
+
+            <div id="menu-list">
+                <p>Olá, {{user.name}}!</p>
+                <ul id="vertical-list">
+                    <li class="item-list">Sair</li>
+                    <li class="item-list"><a href="./character-register.html">Inserir Personagem</a></li>
+                    <li class="item-list"><a href="./data-table.html">Listar Todos</a></li>
+                    <li class="item-list"><a>Listagem por Perfil</a>
+                        <div class="tipos-perfil">
+                            <a class="itens-perfil" id="link-heroi" onclick="loadHero()"  href="character-profile-table.html#herois" target="_blank">Herói</a>
+                            <a class="itens-perfil" id="link-vilao" onclick="loadVillain()" href="character-profile-table.html#viloes" target="_blank">Vilão</a>
+                            <a class="itens-perfil" id="link-antiheroi" onclick="loadAntiHero()" href="character-profile-table.html#antiherois" target="_blank">Anti-herói</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
         <h2 id="all-list">Listagem Geral</h2>
         <div class="card listar">
             <table id="listagem">
@@ -45,11 +66,11 @@
                         <td>Marvel</td>
                         <td>Anti-herói</td>
                         <td>Transmorfo, Deus da Trapaça, feiticeiro</td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" >
-                            <div class="division"></div>
-                        </td>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
                     </tr>
                 </tbody>
             </table>

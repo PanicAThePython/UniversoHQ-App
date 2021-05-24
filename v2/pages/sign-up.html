@@ -10,7 +10,7 @@
     <script type="text/javascript" src="../scripts/defines.js"></script>
     <script type="text/javascript" src="../scripts/user.js"></script>
     <script type="text/javascript" src="../page-scripts/sign-up.js"></script>
-    <title>Universo HQ</title>
+    <title>Universo HQ - Cad. Usuário</title>
 </head>
 <body>
     <header id="start">
@@ -24,17 +24,22 @@
         <section class="card">
             <form action="" method="POST">
                 <h2>Cadastro de Usuário</h2>
-                <label for="name" class="title">Nome:</label>
-                <input type="text" name="name" id="name"><br>
-                <label for="email" class="title">E-mail: </label>
-                <input type="email" name="email" id="email" /><br>
-                <label for="password" class="title">Senha: </label>
-                <input type="password" name="password" id="password" /><br>
-                <label for="confirm-password" class="title">Confirmar Senha: </label>
-                <input type="password" name="confirm-password" id="confirm-password" /><br>
-                <button type="button" onclick="registerUser();">Cadastrar</button>
+                <label for="name" class="title">*Nome:</label>
+                <input type="text" name="name" id="name" required><br>
+                <label for="email" class="title">*E-mail: </label>
+                <input type="email" name="email" id="email" required/><br>
+                <label for="password" class="title">*Senha: </label>
+                <input type="password" name="password" id="password" required/><br>
+                <label for="confirm-password" class="title">*Confirmar Senha: </label>
+                <input type="password" name="confirm-password" id="confirm-password" required/><br>
+                
+                <div class="botoes">
+                    <button type="button" class="cancel">Cancelar</button>
+                    <button type="button" onclick="registerUser();">Cadastrar</button>
+                </div>
             </form>
         </section>
+        <p class="warning">Todos os campos com * são obrigatórios.</p>
         
     </main>
     <footer>

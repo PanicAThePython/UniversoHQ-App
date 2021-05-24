@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
     <script type="text/javascript" src="scripts/md5.js"></script>
     <script type="text/javascript" src="scripts/defines.js"></script>
     <script type="text/javascript" src="scripts/user.js"></script>
     <script type="text/javascript" src="scripts/session.js"></script>
     <script type="text/javascript" src="page-scripts/sign-in.js"></script>
-    <title>Universo HQ</title>
+    <title>Universo HQ - Home</title>
 </head>
 <body>
     <header id="start">
@@ -22,6 +22,13 @@
         </div>
     </header>
     <main>
+        <section id="welcome">
+            <h1 class="titulo-perfil">Seja bem-vindo(a)!</h1>
+            <p class="sobre-perfil">Nessa página você pode <strong>cadastrar os seus personagens favoritos</strong>, editá-los, excluí-los e listá-los.
+                Você também pode <strong>acessar nossa página de listagem personalizada</strong>, onde temos algumas informações
+                interessantes para cada tipo de perfil escolhido. Aproveite a visita e <strong>divirta-se</strong>!
+            </p>
+        </section>
         <section class="card">
             <form action="" method="POST">
                 <h2>Login</h2>
@@ -34,7 +41,11 @@
                     <a href="sign-up.html">Cadastrar nova conta</a><br>
                     <a href="">Esqueci a senha</a>
                 </div>
-                <button type="button" onclick="signIn();">Entrar</button>
+                
+                <div class="botoes">
+                    <button type="button" class="cancel">Cancelar</button>
+                    <button type="button" onclick="signIn();">Entrar</button>
+                </div>
             </form>
         </section>
         
