@@ -201,6 +201,23 @@ main{
     color: #9c0606;
 }
 
+.pagination{
+    float: right;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+#pagination-content{
+    display: flex;
+    justify-content: flex-end;
+    width: 287%;
+}
+
+.pagination-number{
+    margin: 20px;
+    margin-bottom: 0px !important;
+}
+
 #actions{
     width: 50px !important;
 }
