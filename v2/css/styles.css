@@ -210,7 +210,7 @@ main{
 #pagination-content{
     display: flex;
     justify-content: flex-end;
-    width: 287%;
+    margin-left: 64%;
 }
 
 .pagination-number{
@@ -221,6 +221,18 @@ main{
 #actions{
     width: 50px !important;
 }
+
+#action-menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* #action-menu form{
+    width: 40%;
+} */
+
+
 
 .card{
     padding: 20px;
@@ -255,14 +267,34 @@ table{
     margin-left: 14px;
 }
 
-#filter select{
+#action-menu select{
     outline: 0;
-    margin-left: 20px;
-    width: 65%  !important;
+    /* margin-left: 20px; */
+    /* width: 65%  !important; */
+    width: 115px !important;
 }
 
-#filter button{
+#search-profile select, 
+#search-profile input[type=text]{
+    outline: 0;
+    margin-left: 20px;
+    width: 63%  !important;
+}
+
+#search-profile button{
     width: 25% !important;
+}
+
+#action-menu input[type=text]{
+    outline: 0;
+    /* margin-left: 20px; */
+    /* width: 63%  !important; */
+    width: 200px !important;
+}
+
+#action-menu button{
+    /* width: 25% !important; */
+    width: 90px !important;
 }
 
 .warning{
@@ -291,7 +323,9 @@ table{
 .card input[type=password], 
 .card input[type=text], 
 .card #poderes, 
-#filter select{
+#search-profile select,
+#action-menu select,
+#action-menu input[type=text]{
     width: 97%;
     padding: 10px 0px;
     padding-left: 10px;
@@ -303,7 +337,8 @@ table{
 .card input[type=email]:focus, 
 .card input[type=password]:focus, 
 .card input[type=text]:focus, 
-.card #poderes:focus{
+.card #poderes:focus,
+#action-menu input[type=text]:focus{
     outline: 0;
     border-bottom: 2px solid #9c0606;
 }
@@ -349,11 +384,13 @@ table{
 .card form .link a:hover{
     text-decoration: underline;
 }
-.card button, #filter button{
+.card button, 
+#search-profile button,
+#action-menu button{
     color: #FFF;
     padding: 10px 20px;
     background-color: #9c0606;
-    position: relative;
+    /* position: relative; */
     width: 100%;
     margin-top: 20px;
     border: none !important;
@@ -361,7 +398,9 @@ table{
     cursor: pointer;
 }
 
-.card button:hover, #filter button:hover{
+.card button:hover, 
+#seacrh-profile button:hover,
+#action-menu button:hover{
     background-color: #b61f1f;
 }
 

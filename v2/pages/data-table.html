@@ -40,8 +40,23 @@
                 </ul>
             </div>
         </nav>
-        
+
         <h2 id="all-list">Listagem Geral</h2>
+
+        <div class="filter" id="action-menu">
+            <form action="">
+                <select name="order_by" id="order_by">
+                    <option value="">Ordenar por</option>
+                    <option value="0">Alter ego de A a Z</option>
+                    <option value="1">Alter ego de Z a A</option>
+                    <option value="2">Nome de A a Z</option>
+                    <option value="3">Nome de Z a A</option>
+                </select>
+                <button type="button" onclick="">Ordenar</button>
+            </form>
+            <input type="text" name="filter_table" id="filter_table" placeholder="Digite o nome...">
+        </div>
+
         <div class="card listar">
             <table id="listagem">
                 <thead>
@@ -60,7 +75,55 @@
                     </tr>
                 </thead>
                 <tbody id="listagem-body">
-                    <tr>
+                    <tr class="character">
+                        <td>Aranha-fantasma</td>
+                        <td>Gwen Stacy</td>
+                        <td>Marvel</td>
+                        <td>Herói</td>
+                        <td>Flexibilidade, agilidade, escala paredes e lança teias</td>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr class="character">
+                        <td>Kid Flash</td>
+                        <td>Wally West</td>
+                        <td>DC</td>
+                        <td>Herói</td>
+                        <td>Super velocidade, possíveis viagens no tempo e intangibilidade</td>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr class="character">
+                        <td>Doutor Estranho</td>
+                        <td>Stephen Strange</td>
+                        <td>Marvel</td>
+                        <td>Herói</td>
+                        <td>Futuro Mago Supremo, artes místicas</td>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr class="character">
+                        <td>Robin</td>
+                        <td>Dick</td>
+                        <td>DC</td>
+                        <td>Herói</td>
+                        <td>...</td>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                    </tr>
+                    <tr class="character">
                         <td>Loki</td>
                         <td>----</td>
                         <td>Marvel</td>
@@ -73,16 +136,16 @@
                         </tr>
                     </tr>
                 </tbody>
-                <tfoot id="pagination-content">
-                    <tr>
-                        <td colspan="6" class="pagination">
-                            <button type="button" id="decrement"><</button>
-                            <p class="pagination-number">1</p>
-                            <button type="button" id="increment">></button>
-                        </td>
-                    </tr>
-                </tfoot>
             </table>
+            <div id="pagination-content">
+                <tr>
+                    <td class="pagination">
+                        <button type="button" id="decrement"><</button>
+                        <p class="pagination-number">1</p>
+                        <button type="button" id="increment">></button>
+                    </td>
+                </tr>
+            </div>
         </div>
         
     </main>
@@ -90,5 +153,6 @@
         <small>&copy; João Vitor de Oliveira e Natália Sens Weise</small>
     </footer>
     <script src="../scripts/menu.js"></script>
+    <script src="../page-scripts/table-filter.js"></script>
 </body>
 </html>
