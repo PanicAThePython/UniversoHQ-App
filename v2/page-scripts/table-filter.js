@@ -8,7 +8,6 @@ searchCharacter.addEventListener('input', function(){
         for (var i = 0; i < characters.length; i++){
             var character = characters[i]
             var division = divisions[i+1]
-            console.log(character)
             var characterContent = character.textContent
             var expression = new RegExp(this.value, "i")
             if(!expression.test(characterContent)){
@@ -30,3 +29,6 @@ searchCharacter.addEventListener('input', function(){
         }
     }
 })
+
+
+
