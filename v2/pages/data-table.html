@@ -52,7 +52,7 @@
                     <option value="2">Nome de A a Z</option>
                     <option value="3">Nome de Z a A</option>
                 </select>
-                <button type="button" onclick="">Ordenar</button>
+                <button type="button" onclick="orderBy()">Ordenar</button>
             </form>
             <input type="text" name="filter_table" id="filter_table" placeholder="Digite o que deseja...">
         </div>
@@ -76,64 +76,69 @@
                 </thead>
                 <tbody id="listagem-body">
                     <tr class="character">
-                        <td>Aranha-fantasma</td>
+                        <td class="character-name">Aranha-fantasma</td>
                         <td>Gwen Stacy</td>
                         <td>Marvel</td>
                         <td>Herói</td>
                         <td>Flexibilidade, agilidade, escala paredes e lança teias</td>
-                        <tr>
-                            <td colspan="6" >
-                                <div class="division"></div>
-                            </td>
-                        </tr>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
                     </tr>
                     <tr class="character">
-                        <td>Kid Flash</td>
+                        <td class="character-name">Kid Flash</td>
                         <td>Wally West</td>
                         <td>DC</td>
                         <td>Herói</td>
                         <td>Super velocidade, possíveis viagens no tempo e intangibilidade</td>
-                        <tr>
-                            <td colspan="6" >
-                                <div class="division"></div>
-                            </td>
-                        </tr>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
                     </tr>
                     <tr class="character">
-                        <td>Doutor Estranho</td>
+                        <td class="character-name">Doutor Estranho</td>
                         <td>Stephen Strange</td>
                         <td>Marvel</td>
                         <td>Herói</td>
                         <td>Futuro Mago Supremo, artes místicas</td>
-                        <tr>
-                            <td colspan="6" >
-                                <div class="division"></div>
-                            </td>
-                        </tr>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
                     </tr>
                     <tr class="character">
-                        <td>Robin</td>
+                        <td class="character-name">Robin</td>
                         <td>Dick</td>
                         <td>DC</td>
                         <td>Herói</td>
                         <td>...</td>
-                        <tr>
-                            <td colspan="6" >
-                                <div class="division"></div>
-                            </td>
-                        </tr>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
                     </tr>
                     <tr class="character">
-                        <td>Loki</td>
+                        <td class="character-name">Loki</td>
                         <td>----</td>
                         <td>Marvel</td>
                         <td>Anti-herói</td>
                         <td>Transmorfo, Deus da Trapaça, feiticeiro</td>
-                        <tr>
-                            <td colspan="6" >
-                                <div class="division"></div>
-                            </td>
-                        </tr>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -155,6 +160,7 @@
     <script src="../scripts/menu.js"></script>
     <script src="../page-scripts/table-filter.js"></script>
     <script src="../page-scripts/profile-filter.js"></script>
+    <script src="../page-scripts/order-data-table.js"></script>
 
 </body>
 </html>
