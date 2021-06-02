@@ -77,6 +77,21 @@
                 <strong>Vingadores(Marvel)</strong>.
             </p>
 
+            <div class="filter" id="action-menu">
+                <form action="">
+                    <select name="order_by" id="order_by">
+                        <option value="">Ordenar por</option>
+                        <option value="0">Alter ego de A a Z</option>
+                        <option value="1">Alter ego de Z a A</option>
+                        <option value="2">Nome de A a Z</option>
+                        <option value="3">Nome de Z a A</option>
+                    </select>
+                    <button type="button" onclick="orderBy()">Ordenar</button>
+                </form>
+                <input type="text" name="filter_table" id="filter_table" placeholder="Digite o que deseja...">
+            </div>
+    
+
             <div class="card listar">
                 <table id="listagem">
                     <thead>
@@ -95,9 +110,69 @@
                         </tr>
                     </thead>
                     <tbody id="listagem-body">
-
+                        <tr class="character row">
+                            <td class="character-name">Aranha-fantasma</td>
+                            <td>Gwen Stacy</td>
+                            <td>Marvel</td>
+                            <td>Herói</td>
+                            <td>Flexibilidade, agilidade, escala paredes e lança teias</td>
+                            
+                        </tr>
+                        <tr class="row">
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                        <tr class="character row">
+                            <td class="character-name">Kid Flash</td>
+                            <td>Wally West</td>
+                            <td>DC</td>
+                            <td>Herói</td>
+                            <td>Super velocidade, possíveis viagens no tempo e intangibilidade</td>
+                            
+                        </tr>
+                        <tr class="row">
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                        <tr class="character row">
+                            <td class="character-name">Doutor Estranho</td>
+                            <td>Stephen Strange</td>
+                            <td>Marvel</td>
+                            <td>Herói</td>
+                            <td>Futuro Mago Supremo, artes místicas</td>
+                            
+                        </tr>
+                        <tr class="row">
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                        <tr class="character row">
+                            <td class="character-name">Robin</td>
+                            <td>Dick</td>
+                            <td>DC</td>
+                            <td>Herói</td>
+                            <td>...</td>
+                            
+                        </tr>
+                        <tr class="row">
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+                <div id="pagination-content">
+                    <tr>
+                        <td class="pagination">
+                            <button type="button" id="decrement"><</button>
+                            <p class="pagination-number">1</p>
+                            <button type="button" id="increment">></button>
+                        </td>
+                    </tr>
+                </div>
             </div>
 
 
@@ -119,6 +194,21 @@
                 <strong>IMA(Marvel)</strong>, <strong>Hydra(Marvel)</strong> e
                 <strong>Irmandade da Serpente(Marvel)</strong>.
             </p>
+
+            <div class="filter" id="action-menu">
+                <form action="">
+                    <select name="order_by" id="order_by">
+                        <option value="">Ordenar por</option>
+                        <option value="0">Alter ego de A a Z</option>
+                        <option value="1">Alter ego de Z a A</option>
+                        <option value="2">Nome de A a Z</option>
+                        <option value="3">Nome de Z a A</option>
+                    </select>
+                    <button type="button" onclick="orderBy()">Ordenar</button>
+                </form>
+                <input type="text" name="filter_table" id="filter_table" placeholder="Digite o que deseja...">
+            </div>
+
             <div class="card listar">
                 <table id="listagem">
                     <thead>
@@ -140,6 +230,15 @@
 
                     </tbody>
                 </table>
+                <div id="pagination-content">
+                    <tr>
+                        <td class="pagination">
+                            <button type="button" id="decrement"><</button>
+                            <p class="pagination-number">1</p>
+                            <button type="button" id="increment">></button>
+                        </td>
+                    </tr>
+                </div>
             </div>
 
             </tbody>
@@ -161,6 +260,21 @@
                 <strong>Esquadrão Suicida(DC)</strong> e os
                 <strong>Guardiões da Galáxia(Marvel)</strong>.
             </p>
+
+            <div class="filter" id="action-menu">
+                <form action="">
+                    <select name="order_by" id="order_by">
+                        <option value="">Ordenar por</option>
+                        <option value="0">Alter ego de A a Z</option>
+                        <option value="1">Alter ego de Z a A</option>
+                        <option value="2">Nome de A a Z</option>
+                        <option value="3">Nome de Z a A</option>
+                    </select>
+                    <button type="button" onclick="orderBy()">Ordenar</button>
+                </form>
+                <input type="text" name="filter_table" id="filter_table" placeholder="Digite o que deseja...">
+            </div>
+
             <div class="card listar">
                 <table id="listagem">
                     <thead>
@@ -182,6 +296,15 @@
 
                     </tbody>
                 </table>
+                <div id="pagination-content">
+                    <tr>
+                        <td class="pagination">
+                            <button type="button" id="decrement"><</button>
+                            <p class="pagination-number">1</p>
+                            <button type="button" id="increment">></button>
+                        </td>
+                    </tr>
+                </div>
             </div>
             <p class="dica">Se interessou por <span>anti-heróis</span>?<br> Então vem conferir o vídeo abaixo:</p>
 
@@ -198,7 +321,8 @@
     <!-- <script src="../page-scripts/open-filter.js"></script> -->
     <script src="../scripts/menu.js"></script>
     <script src="../page-scripts/execute-filter.js"></script>
-
+    <script src="../page-scripts/order-data-table.js"></script>
+    <script src="../page-scripts/table-filter.js"></script>
 </body>
 
 </html>

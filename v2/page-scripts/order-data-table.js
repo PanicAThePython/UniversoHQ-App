@@ -2,12 +2,12 @@ function orderBy(){
     let selectValue = document.querySelector("#order_by").value
     switch(selectValue){
         case "0":
-            let ordedByEgo = orderByEgo()
+            let ordedByEgo = orderByEgoReverse().reverse()
             clearTable()
             replaceDataTable(ordedByEgo)
             break
         case "1":
-            let ordedByEgoReverse = orderByEgo().reverse()
+            let ordedByEgoReverse = orderByEgoReverse()
             clearTable()
             replaceDataTable(ordedByEgoReverse)
             break
@@ -51,17 +51,17 @@ function orderByName(){
     return ordedCharacters;
 }
 
-function orderByEgo(){
+function orderByEgoReverse(){
     let characters = document.querySelectorAll(".character")
     let counter = 0
     let ordedCharacters = []
-
+    
     for (var i = 0; i < characters.length; i++){
         if (ordedCharacters.length == 0){
             ordedCharacters[counter] = characters[i]
         }
         else{
-            if (characters[i].innerText.split("\t")[1] < ordedCharacters[counter].innerText.split("\t")[1]){
+            if (characters[i].innerText.split("\t")[1] > ordedCharacters[counter].innerText.split("\t")[1]){
                 ordedCharacters[counter+1] = ordedCharacters[counter]
                 ordedCharacters[counter] = characters[i]
                 counter++
@@ -71,6 +71,7 @@ function orderByEgo(){
                 counter++
             }  
         }
+        console.log(ordedCharacters)
     }
 
     return ordedCharacters;
