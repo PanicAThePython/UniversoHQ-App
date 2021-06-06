@@ -222,6 +222,18 @@ main{
     width: 50px !important;
 }
 
+.update-btn, .delete-btn{
+    width: 30px !important;
+    padding: 5px 10px !important;
+    padding-left: 15px !important;
+}
+
+.update-btn img, .delete-btn img{
+    width: 10px;
+    height: 10px;
+    margin-left: -5px;
+}
+
 #action-menu{
     display: flex;
     justify-content: space-around;
