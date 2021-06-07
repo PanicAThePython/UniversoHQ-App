@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="text/javascript" src="scripts/md5.js"></script>
+    <script type="text/javascript" src="scripts/defines.js"></script>
+    <script type="text/javascript" src="scripts/user.js"></script>
+    <script type="text/javascript" src="page-scripts/sign-up.js"></script>
+    <title>Universo HQ</title>
+</head>
+<body>
+    <header id="start">
+        <div id="menu">
+            <div>
+                <a href="#start"><img src="images/logo02.png" alt="Logo Universo HQ"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="card">
+            <form action="" method="POST">
+                <h2>Cadastro de Usuário</h2>
+                <label for="name" class="title">Nome:</label>
+                <input type="text" name="name" id="name"><br>
+                <label for="email" class="title">E-mail: </label>
+                <input type="email" name="email" id="email" /><br>
+                <label for="password" class="title">Senha: </label>
+                <input type="password" name="password" id="password" /><br>
+                <label for="confirm-password" class="title">Confirmar Senha: </label>
+                <input type="password" name="confirm-password" id="confirm-password" /><br>
+                <button type="button" onclick="registerUser();">Cadastrar</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <small>&copy; João Vitor de Oliveira e Natália Sens Weise</small>
+    </footer>
+    
+</body>
+</html>
