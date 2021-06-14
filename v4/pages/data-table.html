@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="../scripts/defines.js"></script>
+    <script src="../scripts/md5.js"></script>
+    <script src="../scripts/session.js"></script>
+    <script src="../scripts/checksession.js"></script>
+    <script src="../scripts/character.js"></script>
+    <script src="../page-scripts/data-table.js"></script>
+    
+    <title>Universo HQ - Listagem</title>
+</head>
+<body>
+    <header id="start">
+        <div id="menu">
+            <div>
+                <a href="#start"><img src="../images/logo02.png" alt="Logo Universo HQ"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <nav>
+            <button type="button" id="menu-button" onclick="openMenu()"></button>
+
+            <div id="menu-list" class="invisible">
+                <p id="menu-user">Olá, {{user.name}}!</p>
+                <ul id="vertical-list">
+                    <li class="item-list">Sair</li>
+                    <li class="item-list"><a href="./character-register.html">Inserir Personagem</a></li>
+                    <li class="item-list"><a href="./data-table.html">Listar Todos</a></li>
+                    <li class="item-list"><a>Listagem por Perfil</a>
+                        <div class="tipos-perfil">
+                            <a class="itens-perfil" id="link-antiheroi" onclick="filterProfile('Anti-heroi')">Anti-herói</a>
+                            <a class="itens-perfil" id="link-heroi" onclick="filterProfile('Heroi')" >Herói</a>
+                            <a class="itens-perfil" id="link-vilao" onclick="filterProfile('Vilao')">Vilão</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h2 id="all-list">Listagem Geral</h2>
+
+        <div class="filter" id="action-menu">
+            <form action="">
+                <select name="order_by" id="order_by">
+                    <option value="">Ordenar por</option>
+                    <option value="0">Alter ego de A a Z</option>
+                    <option value="1">Alter ego de Z a A</option>
+                    <option value="2">Nome de A a Z</option>
+                    <option value="3">Nome de Z a A</option>
+                </select>
+                <button type="button" onclick="orderBy()">Ordenar</button>
+            </form>
+            <input type="text" name="filter_table" id="filter_table" placeholder="Digite o que deseja...">
+        </div>
+
+        <div class="card listar">
+            <table id="listagem">
+                <thead>
+                    <tr id="listagem-header">
+                        <th>Nome</th>
+                        <th>Alter ego</th>
+                        <th>Franquia</th>
+                        <th>Perfil</th>
+                        <th>Poderes</th>
+                        <th id="actions">#</th>
+                        <tr>
+                            <td colspan="6" >
+                                <div class="division"></div>
+                            </td>
+                        </tr>
+                    </tr>
+                </thead>
+                <tbody id="listagem-body">
+                    <tr class="character row">
+                        <td class="character-name">Aranha-fantasma</td>
+                        <td>Gwen Stacy</td>
+                        <td>Marvel</td>
+                        <td>Herói</td>
+                        <td>Flexibilidade, agilidade, escala paredes e lança teias</td>
+                        
+                    </tr>
+                    <tr class="row">
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
+                    </tr>
+                    <tr class="character row">
+                        <td class="character-name">Kid Flash</td>
+                        <td>Wally West</td>
+                        <td>DC</td>
+                        <td>Herói</td>
+                        <td>Super velocidade, possíveis viagens no tempo e intangibilidade</td>
+                        
+                    </tr>
+                    <tr class="row">
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
+                    </tr>
+                    <tr class="character row">
+                        <td class="character-name">Doutor Estranho</td>
+                        <td>Stephen Strange</td>
+                        <td>Marvel</td>
+                        <td>Herói</td>
+                        <td>Futuro Mago Supremo, artes místicas</td>
+                        
+                    </tr>
+                    <tr class="row">
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
+                    </tr>
+                    <tr class="character row">
+                        <td class="character-name">Robin</td>
+                        <td>Dick</td>
+                        <td>DC</td>
+                        <td>Herói</td>
+                        <td>...</td>
+                        
+                    </tr>
+                    <tr class="row">
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
+                    </tr>
+                    <tr class="character row">
+                        <td class="character-name">Loki</td>
+                        <td></td>
+                        <td>Marvel</td>
+                        <td>Anti-herói</td>
+                        <td>Transmorfo, Deus da Trapaça, feiticeiro</td>
+                        
+                    </tr>
+                    <tr class="row">
+                        <td colspan="6" >
+                            <div class="division"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="pagination-content">
+                <tr>
+                    <td class="pagination">
+                        <button type="button" id="decrement-page-btn" onclick="decrementPage();"><</button>
+                        <p class="pagination-number" id="pagination-number">1</p>
+                        <button type="button" id="increment-page-btn" onclick="incrementPage()">></button>
+                    </td>
+                </tr>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <small>&copy; João Vitor de Oliveira e Natália Sens Weise</small>
+    </footer>
+    <script src="../scripts/menu.js"></script>
+    <script src="../page-scripts/table-filter.js"></script>
+    <script src="../page-scripts/profile-filter.js"></script>
+    <script src="../page-scripts/order-data-table.js"></script>
+
+</body>
+</html>

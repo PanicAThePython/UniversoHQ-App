@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="../scripts/defines.js"></script>
+    <script src="../scripts/md5.js"></script>
+    <script src="../scripts/session.js"></script>
+    <script src="../scripts/checksession.js"></script>
+    <script src="../scripts/character.js"></script>
+    <script src="../page-scripts/character-register.js"></script>
+    <title>Universo HQ - Cad. Personagem</title>
+</head>
+<body>
+    <header id="start">
+        <div id="menu">
+            <div>
+                <a href="#start"><img src="../images/logo02.png" alt="Logo Universo HQ"></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <button type="button" id="menu-button" onclick="openMenu()"></button>
+
+            <div id="menu-list" class="invisible">
+                <p id="menu-user">Olá, {{user.name}}!</p>
+                <ul id="vertical-list">
+                    <li class="item-list">Sair</li>
+                    <li class="item-list"><a href="./character-register.html">Inserir Personagem</a></li>
+                    <li class="item-list"><a href="./data-table.html">Listar Todos</a></li>
+                    <li class="item-list"><a>Listagem por Perfil</a>
+                        <div class="tipos-perfil">
+                            <a class="itens-perfil" id="link-antiheroi" onclick="filterProfile('Anti-heroi')">Anti-herói</a>
+                            <a class="itens-perfil" id="link-heroi" onclick="filterProfile('Heroi')" >Herói</a>
+                            <a class="itens-perfil" id="link-vilao" onclick="filterProfile('Vilao')">Vilão</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="card">
+            <form action="" method="POST">
+                <h2>Cadastro de Personagem</h2>
+                <label for="nome" class="title">*Conhecido como:</label>
+                <input type="hidden" name="charId" id="charId" value=""></input>
+                <input type="text" name="nome" id="nome" placeholder="Ex: Homem-Aranha" required>
+                <label for="ego" class="title">Alter ego:</label>
+                <input type="text" name="ego" id="ego" placeholder="Ex: Peter Parker"> 
+                <label for="franquia" class="title">*Franquia:</label>
+                <div class="vertical-flex">
+                    <div><input type="radio" name="franquia" id="franquia" value="DC"/>DC<br></div>
+                    <div><input type="radio" name="franquia" id="franquia" value="Marvel" required/>Marvel</div>
+                </div>
+                <label for="perfil" class="title">*Perfil:</label>
+                <div class="vertical-flex">
+                    <div><input type="radio" name="perfil" id="perfil" value="Anti-herói"/>Anti-herói<br></div>
+                    <div><input type="radio" name="perfil" id="perfil" value="Herói" required/>Herói</div>
+                    <div><input type="radio" name="perfil" id="perfil" value="Vilão"/>Vilão</div>
+                </div>
+                <label for="poderes" class="title">*Poderes:</label>
+                <textarea name="poderes" id="poderes" cols="30" rows="10" required></textarea>
+                <div class="botoes">
+                    <button type="button" class="cancel">Cancelar</button>
+                    <button type="button" id="registerOrUpdateBtn" onClick="registerOrUpdate();" value="Cadastrar" >Cadastrar</button>
+                </div>
+            </form>
+        </section>
+        <p class="warning">Todos os campos com * são obrigatórios.</p>
+        
+    </main>
+    <footer>
+        <small>&copy; João Vitor de Oliveira e Natália Sens Weise</small>
+    </footer>
+    <script src="../scripts/menu.js"></script>
+    <script src="../page-scripts/profile-filter.js"></script>
+    
+
+</body>
+</html>
